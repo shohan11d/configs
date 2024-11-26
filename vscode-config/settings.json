@@ -2,16 +2,28 @@
    // =====================
    // GENERAL CONFIGURATION
    // =====================
+   // "editor.scrollbar.vertical": "hidden",
+   // "editor.scrollbar.horizontal": "hidden",
+   // "editor.hideCursorInOverviewRuler": true,
+   "editor.overviewRulerBorder": false,
+   //"editor.autoClosingBrackets": "never",
+   // "editor.occurrencesHighlight": "off",
+   "vim.highlightedyank.textColor": "#e6e3de",
+   "editor.fontWeight": "400",
+   "scm.diffDecorationsGutterWidth": 3,
+   "scm.diffDecorations": "gutter",
+   "editor.accessibilitySupport": "off",
+   // "scm.diffDecorationsGutterPattern": { "added": false, "modified": false },
+
    // ---Font---
    "editor.fontSize": 16,
    "editor.fontFamily": "Source Code Pro",
    "window.zoomLevel": 0.4,
 
    //---Yank---
-   "vim.highlightedyank.color": "#e4e4e41a",
-   "vim.highlightedyank.textColor": "#e6e3de",
    "vim.highlightedyank.enable": true,
-   "vim.highlightedyank.duration": 180,
+   "vim.highlightedyank.color": "#a9dc7660",
+   "vim.highlightedyank.duration": 250,
 
    // ---Zenmode Fix---
    "zenMode.hideLineNumbers": false,
@@ -21,6 +33,7 @@
    //---Extension---
    "vim.surround": true,
    "vim.easymotion": true,
+   // "vim.incsearch": true,
 
    //---Prettier---
    "prettier.singleQuote": true,
@@ -46,6 +59,7 @@
    "vim.leader": " ",
    "vim.foldfix": true,
    "editor.lineNumbers": "relative",
+
    "editor.cursorSurroundingLines": 6,
    "window.customMenuBarAltFocus": false,
    "window.newWindowDimensions": "fullscreen",
@@ -92,6 +106,38 @@
 
    "vim.normalModeKeyBindingsNonRecursive": [
       // {
+      //    "before": ["g", "p", "d"],
+      //    "commands": ["editor.action.peekDefinition"]
+      //  },
+      //  {
+      //    "before": ["g", "h"],
+      //    "commands": ["editor.action.showDefinitionPreviewHover"]
+      //  },
+      //  {
+      //    "before": ["g", "i"],
+      //    "commands": ["editor.action.goToImplementation"]
+      //  },
+      //  {
+      //    "before": ["g", "p", "i"],
+      //    "commands": ["editor.action.peekImplementation"]
+      //  },
+      //  {
+      //    "before": ["g", "q"],
+      //    "commands": ["editor.action.quickFix"]
+      //  },
+      //  {
+      //    "before": ["g", "r"],
+      //    "commands": ["editor.action.referenceSearch.trigger"]
+      //  },
+      //  {
+      //    "before": ["g", "t"],
+      //    "commands": ["editor.action.goToTypeDefinition"]
+      //  },
+      //  {
+      //    "before": ["g", "p", "t"],
+      //    "commands": ["editor.action.peekTypeDefinition"]
+      //  }
+      // {
       //    "before": ["<Leader>", "e", "b", "i"],
       //    "commands": ["editor.emmet.action.balanceIn"]
       // },
@@ -127,6 +173,10 @@
          "before": ["<Leader>", "e", "t"],
          "commands": ["editor.emmet.action.matchTag"]
       },
+      {
+         "before": ["v", "n"],
+         "after": ["v", "g", "_", "y"]
+      },
       // {
       //    "before": ["<Leader>", "e", "n"],
       //    "commands": ["editor.emmet.action.nextEditPoint"]
@@ -139,7 +189,8 @@
          "before": ["<Leader>", "e", "x"],
          "commands": ["editor.emmet.action.evaluateMathExpression"]
       },
-
+      { "before": ["n"], "after": ["n", "z", "z"] },
+      { "before": ["N"], "after": ["N", "z", "z"] },
       {
          "before": ["<Leader>", "e", "r", "t"],
          "commands": ["editor.emmet.action.removeTag"]
@@ -460,7 +511,8 @@
          "before": ["leader", "h"],
          "commands": ["workbench.action.focusLeftGroup"]
       },
-
+      { "before": ["K"], "after": ["m", "`", "i", "enter", "esc", "`", "`"] },
+      { "before": ["J"], "after": ["m", "`", "J", "`", "`"] },
       {
          "before": ["leader", "j"],
          "commands": ["workbench.action.focusBelowGroup"]
@@ -556,6 +608,8 @@
       // Move selected lines while staying in visual mode
       { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
       { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+      //{ "before": ["K"], "after": ["m", "`", "i", "enter", "esc", "`", "`"] },
+      //{ "before": ["J"], "after": ["m", "`", "J", "`", "`"] },
       {
          "before": ["<Leader>", "d"],
          "commands": ["editor.action.duplicateSelection"]
@@ -608,5 +662,12 @@
    "terminal.integrated.fontFamily": "Source Code Pro",
    "workbench.colorTheme": "One Monokai",
    "workbench.sideBar.location": "right",
-   "workbench.activityBar.location": "hidden"
+   "workbench.activityBar.location": "hidden",
+   "window.titleBarStyle": "custom",
+   "git.openRepositoryInParentFolders": "never",
+   "editor.padding.top": 10,
+   "editor.padding.bottom": 10,
+   "keyboard.dispatch": "keyCode",
+   "editor.wordWrap": "on",
+   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
 }

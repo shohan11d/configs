@@ -168,6 +168,7 @@
    {
       "key": "alt+k",
       "command": "selectPrevCodeAction",
+
       "when": "editorFocus && !suggestWidgetVisible"
    },
    // move up and down in quick open file box
@@ -176,7 +177,7 @@
       "command": "workbench.action.quickOpenNavigateNext",
       "when": "inQuickOpen"
    },
-   
+
    {
       "key": "alt+k",
       "command": "workbench.action.quickOpenNavigatePrevious",
@@ -187,8 +188,20 @@
       "command": "workbench.action.terminal.focusNext",
       "when": "terminalFocus"
    },
+
    {
       "key": "ctrl+shift+b",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus"
+   },
+   {
+      "key": "Alt+j",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus"
+   },
+
+   {
+      "key": "Alt+k",
       "command": "workbench.action.terminal.focusPrevious",
       "when": "terminalFocus"
    },
@@ -201,13 +214,19 @@
       "command": "workbench.action.terminal.new",
       "when": "terminalFocus"
    },
+   {
+      "key": "Alt+n",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalFocus"
+   },
+
    // {
    //   "key": "ctrl+shift+w",
    //   "command": "workbench.action.terminal.kill",
    //   "when": "terminalFocus"
    // },
    {
-      "key": "ctrl+shift+w",
+      "key": "ctrl+w",
       "command": "workbench.action.terminal.kill",
       "when": "terminalFocus"
    },
@@ -216,7 +235,7 @@
       "command": "workbench.action.toggleSidebarVisibility",
       "key": "ctrl+e"
    },
-   
+
    {
       "command": "workbench.files.action.focusFilesExplorer",
       "key": "ctrl+e",
@@ -414,6 +433,7 @@
       "command": "-search.action.replaceAllInFile",
       "when": "fileMatchFocus && isEditableItem && replaceActive && searchViewletVisible"
    },
+
    {
       "key": "ctrl+shift+enter",
       "command": "-search.action.replaceAllInFolder",
@@ -424,6 +444,7 @@
       "command": "-workbench.action.chat.sendToNewChat",
       "when": "chatInputHasText && inChatInput && !chatSessionRequestInProgress"
    },
+
    {
       "key": "ctrl+v",
       "command": "-extension.vim_ctrl+v",
@@ -438,5 +459,33 @@
       "key": "ctrl+d",
       "command": "-notebook.addFindMatchToSelection",
       "when": "config.notebook.multiSelect.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
-   }
+   },
+   {
+      "key": "ctrl+shift+-",
+      "command": "workbench.action.decreaseViewSize"
+   },
+   {
+      "key": "ctrl+shift+=",
+      "command": "workbench.action.increaseViewSize"
+   },
+   {
+      "key": "ctrl+k ctrl+k",
+      "command": "workbench.action.evenEditorWidths"
+   },
+   {
+      "key": "ctrl+k ctrl+m",
+      "command": "workbench.action.toggleMaximizeEditorGroup",
+      "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+   },
+   {
+      "command": "runCommands",
+      "key": "ctrl+k ctrl+n",
+      "args": { "commands": [ "workbench.action.focusNextGroup", "workbench.action.maximizeEditorHideSidebar" ] },
+      "when": "!terminalFocus"
+   },
+   {
+      "key": "f",
+      "command": "explorer.newFolder",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    }
 ]
