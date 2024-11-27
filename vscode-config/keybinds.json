@@ -96,6 +96,22 @@
       "command": "copyRelativeFilePath",
       "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
    },
+   // Git
+   // {
+   // 	"key": "g",
+   // 	"command": "workbench.scm.focus",
+   // 	"when": "!editorFocus && !inputFocus"
+   // },
+   // {
+   // 	"key": "o",
+   // 	"command": "workbench.action.focusNextPart",
+   // 	"when": "timelineFollowActiveEditor && !inputFocus"
+   // },
+   // {
+   // 	"key": "c",
+   // 	"command": "git.timeline.copyCommitId",
+   // 	"when": "timelineFollowActiveEditor && !inputFocus"
+   // },
    // Move active editor left or right (useful for full-stack web dev).
    // {
    //   "key": "cmd+ctrl+j",
@@ -118,12 +134,12 @@
       "when": "terminalFocus && terminalProcessSupported"
    },
    {
-      "key": "ctrl+shift+j",
+      "key": "ctrl+j",
       "command": "workbench.action.terminal.scrollDown",
       "when": "terminalFocus && terminalProcessSupported"
    },
    {
-      "key": "ctrl+shift+k",
+      "key": "ctrl+k",
       "command": "workbench.action.terminal.scrollUp",
       "when": "terminalFocus && terminalProcessSupported"
    },
@@ -155,13 +171,13 @@
       "when": "editorTextFocus && suggestWidgetVisible"
    },
    {
-      "key": "alt+k",
+      "key": "ctrl+k",
       "command": "selectPrevSuggestion",
       "when": "editorTextFocus && suggestWidgetVisible"
    },
    // move up and down in quick fix box
    {
-      "key": "alt+j",
+      "key": "ctrl+j",
       "command": "selectNextCodeAction",
       "when": "editorFocus && !suggestWidgetVisible"
    },
@@ -386,10 +402,6 @@
    //   "command": "-workbench.action.togglePanel"
    // },
    {
-      "key": "ctrl+k",
-      "command": "workbench.action.nextEditor"
-   },
-   {
       "key": "ctrl+pagedown",
       "command": "-workbench.action.nextEditor"
    },
@@ -397,10 +409,6 @@
       "key": "ctrl+k",
       "command": "-extension.vim_ctrl+k",
       "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
-   },
-   {
-      "key": "ctrl+j",
-      "command": "workbench.action.previousEditor"
    },
    {
       "key": "ctrl+n",
@@ -480,12 +488,17 @@
    {
       "command": "runCommands",
       "key": "ctrl+k ctrl+n",
-      "args": { "commands": [ "workbench.action.focusNextGroup", "workbench.action.maximizeEditorHideSidebar" ] },
+      "args": {
+         "commands": [
+            "workbench.action.focusNextGroup",
+            "workbench.action.maximizeEditorHideSidebar"
+         ]
+      },
       "when": "!terminalFocus"
    },
    {
       "key": "f",
       "command": "explorer.newFolder",
       "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    }
+   }
 ]
