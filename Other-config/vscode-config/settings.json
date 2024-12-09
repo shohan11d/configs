@@ -1074,5 +1074,8 @@
    "editor.padding.bottom": 10,
    "keyboard.dispatch": "keyCode",
    "editor.wordWrap": "on",
-   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?"
+   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+   "editor.parameterHints.enabled":false
+
+
 }
